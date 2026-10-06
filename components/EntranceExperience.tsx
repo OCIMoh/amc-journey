@@ -47,6 +47,7 @@ function finishEntrance() {
 }
 
 function lockPage() {
+  window.scrollTo(0, 0);
   document.documentElement.dataset.amcEntrance = "active";
   document.documentElement.classList.add("amc-entrance-active");
   document.documentElement.style.overflow = "hidden";
