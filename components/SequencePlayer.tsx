@@ -17,7 +17,7 @@ type SequencePlayerProps = {
   intervalMs?: number;
   /** @deprecated Use intervalMs. Kept so older call sites still compile. */
   fps?: number;
-  extension?: "jpg" | "png";
+  extension?: "jpg" | "png" | "webp";
   className?: string;
   alt?: string;
   reducedMotion?: boolean;
@@ -101,7 +101,7 @@ export function SequencePlayer({
   startIndex = 1,
   intervalMs,
   fps,
-  extension = "jpg",
+  extension = "webp",
   className = "",
   alt = "",
   reducedMotion = false,
@@ -341,7 +341,7 @@ export function SequencePlayer({
         src={still}
         alt=""
         aria-hidden
-        className="absolute inset-0 h-full w-full object-cover"
+        className="absolute inset-0 h-full w-full object-cover object-[center_top] md:object-center"
         decoding="sync"
         fetchPriority="high"
         draggable={false}
@@ -352,7 +352,7 @@ export function SequencePlayer({
         <img
           src={still}
           alt={alt}
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-0 h-full w-full object-cover object-[center_top] md:object-center"
           decoding="sync"
           fetchPriority="high"
           draggable={false}
@@ -372,7 +372,7 @@ export function SequencePlayer({
                 src={src}
                 alt={i === 0 ? alt : ""}
                 data-index={i}
-                className="absolute inset-0 h-full w-full object-cover"
+                className="absolute inset-0 h-full w-full object-cover object-[center_top] md:object-center"
                 style={{ display: i === 0 ? "block" : "none" }}
                 decoding={i === 0 ? "sync" : "async"}
                 fetchPriority={i === 0 ? "high" : "low"}
@@ -394,7 +394,7 @@ export function SequencePlayer({
                 src={src}
                 alt=""
                 data-index={i}
-                className="absolute inset-0 h-full w-full object-cover"
+                className="absolute inset-0 h-full w-full object-cover object-[center_top] md:object-center"
                 style={{ display: i === 0 ? "block" : "none" }}
                 decoding="async"
                 loading="eager"

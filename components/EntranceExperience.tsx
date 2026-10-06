@@ -125,7 +125,7 @@ export function EntranceExperience({ children }: { children: ReactNode }) {
       return;
     }
     video.currentTime = 0;
-    video.playbackRate = 1.5;
+    video.playbackRate = 5.0;
     const playPromise = video.play();
     if (playPromise && typeof playPromise.then === "function") {
       playPromise.catch(() => {
@@ -266,7 +266,7 @@ export function EntranceExperience({ children }: { children: ReactNode }) {
                   preload="auto"
                   muted
                   onLoadedMetadata={(e) => {
-                    e.currentTarget.playbackRate = 1.5;
+                    e.currentTarget.playbackRate = 5.0;
                   }}
                   onEnded={onVideoEnded}
                 />

@@ -41,12 +41,12 @@ export default function RootLayout({
         <link
           rel="preload"
           as="image"
-          href="/animations/allpets/start/01.jpg"
+          href="/animations/allpets/start/01.webp"
           fetchPriority="high"
         />
-        <link rel="preload" as="image" href="/animations/allpets/start/02.jpg" />
-        <link rel="preload" as="image" href="/animations/allpets/start/03.jpg" />
-        <link rel="preload" as="image" href="/animations/allpets/start/04.jpg" />
+        <link rel="preload" as="image" href="/animations/allpets/start/02.webp" />
+        <link rel="preload" as="image" href="/animations/allpets/start/03.webp" />
+        <link rel="preload" as="image" href="/animations/allpets/start/04.webp" />
       </head>
       <body className="bg-canvas font-body text-ink antialiased">{children}</body>
     </html>

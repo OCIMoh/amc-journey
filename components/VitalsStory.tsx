@@ -142,17 +142,17 @@ export function ColdOpenHero() {
       <div className="sticky top-0 h-[100svh] overflow-hidden">
         <div className="hero-still absolute inset-0">
           <SequencePlayer
-            startPrefix="https://kindredpetcare.com/animations/allpets/start/"
+            startPrefix="/animations/allpets/start/"
             startCount={17}
-            loopPrefix="https://kindredpetcare.com/animations/allpets/loop/"
+            loopPrefix="/animations/allpets/loop/"
             loopCount={96}
             startIndex={1}
             intervalMs={80}
             duplicateFirst
-            extension="jpg"
+            extension="webp"
             reducedMotion={reducedMotion}
             playbackEnabled={introComplete}
-            stillSrc="https://kindredpetcare.com/animations/allpets/start/01.jpg"
+            stillSrc="/animations/allpets/start/01.webp"
             alt="Warm bond between people and their animals"
             className="absolute inset-0"
           />
